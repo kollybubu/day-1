@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\articlecontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,7 +52,13 @@ Route::prefix('dashboard')->group(function(){
 });
 
 //laravel view
+// Route::get('/', function(){
+//     return view('index');
+// });
+// Route::get('/students', [StudentController::class, 'index']);
+
+
 Route::get('/', function(){
     return view('index');
 });
-Route::get('/students', [StudentController::class, 'index']);
+Route::get('/article', [articlecontroller::class, 'index']);
